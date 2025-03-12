@@ -1,38 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700&family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-
+/* Centering the image container */
 .home-image {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .img-box {
+}
+
+/* Image Box */
+.img-box {
     position: relative;
-  }
-  
-  #bouncing-img {
-    width: 350px;
-    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: ce
+}
+
+/* Bouncing Image */
+#bouncing-img {
+    width:450px;
+    height: 450px;
     object-fit: cover;
     border-radius: 50%;
-    position:   relative;
+    position: relative;
     animation: bounce 2s infinite ease-in-out;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
+}
+
+/* Flat Circular Base (Disc) */
+.base {
+    position: relative;
+    top: 10px;
+    left: 95px;
+    width: 280px;
+    height: 80px; /* Make it flatter */
+    background: radial-gradient(circle, #12f7ff70 0%, #12f7ff 80%);
+    border-radius: 50%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    animation: platform-bounce 2s infinite ease-in-out;
+}
+
+/* Bouncing Animation for Image */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-30px); 
+        transform: translateY(-30px);
     }
-    100% {
-      transform: translateY(0);    
+}
+
+/* Bouncing Effect for Flat Platform */
+@keyframes platform-bounce {
+    0%, 100% {
+        transform: scaleX(1);
+        opacity: 1;
     }
-  }
+    50% {
+        transform: scaleX(0.9); /* Slight horizontal squash */
+        opacity: 0.85; /* Slight dim effect */
+    }
+}
+
+
+
+
   
 
 *{
@@ -821,6 +852,23 @@ section{
     header.sticky{
         padding: 15px 5%;
     }
+
+    #bouncing-img {
+        width:350px;
+        height: 350px;
+      
+    }
+    
+    /* Flat Circular Base (Disc) */
+    .base {
+        position: relative;
+        top: 2px;
+        left: 45px;
+        width: 280px;
+        height: 80px; /* Make it flatter */
+       
+    }
+    
 
     footer{
         padding: 15px 5%;
