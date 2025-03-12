@@ -73,6 +73,7 @@
     list-style: none;
     scroll-behavior: smooth;
     text-decoration: none;
+    overflow: hidden;
 }
 
 :root{
@@ -854,8 +855,8 @@ section{
     }
 
     #bouncing-img {
-        width:350px;
-        height: 350px;
+        width:250px;
+        height: 250px;
       
     }
     
@@ -863,13 +864,13 @@ section{
     .base {
         position: relative;
         top: 2px;
-        left: 45px;
-        width: 280px;
+        left: 18px;
+        width: 220px;
         height: 80px; /* Make it flatter */
        
     }
     
-
+    
     footer{
         padding: 15px 5%;
     }
