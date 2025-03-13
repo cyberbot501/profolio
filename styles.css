@@ -13,7 +13,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: ce
+    align-items: center;
 }
 
 /* Bouncing Image */
@@ -30,7 +30,7 @@
 .base {
     position: relative;
     top: 10px;
-    left: 95px;
+    left: 15px;
     width: 280px;
     height: 80px; /* Make it flatter */
     background: radial-gradient(circle, #12f7ff70 0%, #12f7ff 80%);
@@ -853,21 +853,7 @@ section{
         padding: 15px 5%;
     }
 
-    #bouncing-img {
-        width:250px;
-        height: 250px;
-      
-    }
-    
-    /* Flat Circular Base (Disc) */
-    .base {
-        position: relative;
-        top: 2px;
-        left: 18px;
-        width: 220px;
-        height: 80px; /* Make it flatter */
-       
-    }
+
     
     
     footer{
@@ -943,6 +929,44 @@ section{
 
 
 @media (max-width:420px) {
+
+    #bouncing-img {
+        width:250px;
+        height: 250px;
+      overflow: hidden;
+    }
+    .info-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .change-text h3{
+        font-size: 1.2rem;
+    }
+
+    .home-content{
+        width: 300px;
+        overflow-x: hidden;
+    }
+
+    .home-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    
+    /* Flat Circular Base (Disc) */
+    .base {
+        position: relative;
+        top: 2px;
+        left: 10px;
+        width: 220px;
+        height: 80px; /* Make it flatter */
+        overflow: hidden;
+       
+    }
     html{
         font-size: 80%;
     }
